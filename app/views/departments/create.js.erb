@@ -1,0 +1,11 @@
+<% if @department.errors.any? %>
+$("<%= j(render partial: 'errors', 
+	locals: {title: '新增失败！',error: @department}) %>")
+.prependTo("#newDepartment .content");
+<% else %>
+$("<%= j(render partial: 'department', object: @department) %>")
+.prependTo("table.ui.table tbody");
+
+$('#newDepartment').modal('hide');
+$('#new_department input[id]').val('');
+<% end %>

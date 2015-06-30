@@ -1,0 +1,10 @@
+<% if @department.errors.any?%>
+$("<%= j(render partial: 'errors', 
+	locals: {title: '修改失败',error: @department}) %>")
+.prependTo("#editDepartment .content");
+<% else %>
+$("#department_<%= @department.id %>").replaceWith(
+"<%= j(render partial: 'department', object: @department) %>"
+);
+$('#editDepartment').modal('hide');
+<% end %>
