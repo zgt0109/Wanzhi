@@ -10,6 +10,12 @@
 					Department.all.collect{ |p| [p.name, p.id] },
 					{include_blank: false},{class: 'ui dropdown'} %>
 	</div>
+	<div class="field">
+		<%=p.label  :position_id %>
+		<%=p.select :position_id, 
+					Position.all.collect{ |p| [p.name, p.id] },
+					{include_blank: false},{class: 'ui dropdown'} %>
+	</div>
 </div>
 	<%= p.submit class: 'ui button green'%>
 <% end %>

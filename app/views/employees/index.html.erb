@@ -4,6 +4,7 @@
 		<tr>
 			<th>员工姓名</th>
 			<th>所属部门</th>
+			<th>职位</th>
 			<th colspan="2">操作</th>
 		</tr>
 	</thead>
@@ -12,6 +13,7 @@
 	</tbody>
 </table>
 <%= link_to '返回部门管理', departments_path, class: 'ui button green'%>
+<%= link_to '返回职位管理', positions_path, class: 'ui button green'%>
 <!-- 新增弹出框 -->
 <div class="ui modal" id="newEmployee">
 	<i class="close icon"></i>
