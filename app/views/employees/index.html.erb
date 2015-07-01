@@ -1,0 +1,26 @@
+<%= link_to '新增部门员工', new_employee_path,remote: true, class: 'ui button green'%>
+<table class="ui celled table">
+	<thead>
+		<tr>
+			<th>员工姓名</th>
+			<th>所属部门</th>
+			<th colspan="2">操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= render partial: "employee", collection: @employees %>
+	</tbody>
+</table>
+<%= link_to '返回', departments_path, class: 'ui button green'%>
+<!-- 新增弹出框 -->
+<div class="ui modal" id="newEmployee">
+	<i class="close icon"></i>
+	<div class="header">新增部门员工</div>
+	<div class="content"></div>
+</div>
+
+<div class="ui modal" id="editEmployee">
+	<i class="close icon"></i>
+	<div class="header">修改部门员工</div>
+	<div class="content"></div>
+</div>

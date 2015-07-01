@@ -10,7 +10,8 @@
 		<%= render partial: "department", collection: @departments %>
 	</tbody>
 </table>
-<%= link_to '新增部门员工', new_department_path,remote: true, class: 'ui button green'%>
+<%= link_to '新增部门员工', new_employee_path,remote: true, class: 'ui button green'%>
+<%= link_to '进入员工',employees_path, class: 'ui button green'%>
 <!-- 新增弹出框 -->
 <div class="ui modal" id="newDepartment">
 	<i class="close icon"></i>
@@ -21,5 +22,17 @@
 <div class="ui modal" id="editDepartment">
 	<i class="close icon"></i>
 	<div class="header">修改部门</div>
+	<div class="content"></div>
+</div>
+
+<div class="ui modal" id="newEmployee">
+	<i class="close icon"></i>
+	<div class="header">新增部门员工</div>
+	<div class="content"></div>
+</div>
+
+<div class="ui modal" id="editEmployee">
+	<i class="close icon"></i>
+	<div class="header">修改部门员工</div>
 	<div class="content"></div>
 </div>

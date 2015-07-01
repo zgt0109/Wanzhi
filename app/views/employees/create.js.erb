@@ -1,0 +1,8 @@
+<% if @employee.errors.any? %>
+$("<%= j(render partial: 'errors', 
+	locals: {title: '新增失败！',error: @employee}) %>")
+.prependTo("#newEmployee .content");
+<% else %>
+location.href="<%= employees_path %>";
+<% end %>
+
