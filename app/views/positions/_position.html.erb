@@ -1,0 +1,15 @@
+<tr id="position_<%= position.id %>">
+  <td><%= position.name %></td>
+  <td><%= position.department.name %></td>
+  <td><%= link_to edit_position_path(position),
+  remote: true, class: 'ui button basic icon small green' do  %>
+      <i class="edit icon"></i>修改
+      <% end %>
+   </td>
+   <td><%= link_to position_path(position),
+   method: :delete , data: {confirm: 'Are you Sure?'}, 
+   class: 'ui button basic icon small red' do %>
+      <i class="trash circle icon"></i>删除
+      <% end %>
+   </td>
+</tr>

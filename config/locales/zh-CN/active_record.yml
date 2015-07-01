@@ -3,11 +3,15 @@ zh-CN:
     models:
       department: 部门
       employee: 员工
+      position: 职位
     attributes:
 
       department:
         name: 部门名称
       employee:
         name: 员工姓名
+        department_id: 部门名称
+      position:
+        name: 职位名称
         department_id: 部门名称
 
