@@ -1,4 +1,15 @@
-<%= link_to '新增部门', new_department_path,remote: true, class: 'ui button green'%>
+<div class="ui two column middle aligned grid">
+    <div class="column">
+    <%= link_to '新增部门', new_department_path,remote: true, class: 'ui button green'%>
+    </div>
+    <div class="column">
+        <div class="ui icon input right fluid">
+            <input type="text" placeholder="搜索">
+            <i class="search icon"></i>
+        </div>
+    </div>
+</div>
+
 <table class="ui celled table">
 	<thead>
 		<tr>

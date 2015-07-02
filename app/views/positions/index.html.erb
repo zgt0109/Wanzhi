@@ -1,4 +1,15 @@
-<%= link_to '新增职位', new_position_path,remote: true, class: 'ui button positive' %>
+<div class="ui two column middle aligned grid">
+    <div class="column">
+     <%= link_to '新增职位', new_position_path,remote: true, class: 'ui button positive' %>
+    </div>
+    <div class="column">
+        <div class="ui icon input right fluid">
+            <input type="text" placeholder="搜索">
+            <i class="search icon"></i>
+        </div>
+    </div>
+</div>
+
   <table class="ui celled table">
     <thead>
        <tr>

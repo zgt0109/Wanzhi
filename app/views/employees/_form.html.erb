@@ -1,45 +1,56 @@
 <%= form_for @employee,remote: true, html: {class: 'ui form'} do |p| %>
 <div class="fields">
-	<div class="field">
-		<%=p.label :name %>
-		<%=p.text_field :name %>
-	</div>
-	<div class="field">
-		<%=p.label :englishname %>
-		<%=p.text_field :englishname %>
-	</div>
-	<div class="field">
-		<%= p.label :sex %>
-		<%= p.select :sex, [['男', 1],['女', 0]], {}, {class: 'ui dropdown'} %>
-	</div>
-	<div class="field">
-		<%=p.label  :department_id %>
-		<%=p.select :department_id, 
-					Department.all.collect{ |p| [p.name, p.id] },
-					{include_blank: false},{class: 'ui dropdown'} %>
-	</div>
-	<div class="field">
+		<div class="field">
+			<%=p.label :name %>
+			<%=p.text_field :name %>
+		</div>
+		<div class="field">
+			<%=p.label :englishname %>
+			<%=p.text_field :englishname %>
+		</div>
+		<div class="field">
+			<%= p.label :sex %>
+			<%= p.select :sex, [['男', 1],['女', 0]], {}, {class: 'ui dropdown'} %>
+		</div>
+		<div class="field">
+			<%=p.label  :department_id %>
+			<%=p.select :department_id, 
+						Department.all.collect{ |p| [p.name, p.id] },
+						{include_blank: false},{class: 'ui dropdown'} %>
+		</div>
+</div>
+<div class="fields">
+		<div class="field">
 		<%=p.label  :position_id %>
 		<%=p.select :position_id, 
 					Position.all.collect{ |p| [p.name, p.id] },
 					{include_blank: false},{class: 'ui dropdown'} %>
-	</div>
-	<div class="field">
-		<%=p.label :telephone %>
-		<%=p.text_field :telephone %>
-	</div>
-	<div class="field">
-		<%=p.label :phone %>
-		<%=p.text_field :phone %>
-	</div>
-	<div class="field">
-		<%=p.label :qq %>
-		<%=p.text_field :qq %>
-	</div>
-	<div class="field">
-		<%=p.label :email %>
-		<%=p.text_field :email %>
-	</div>
+		</div>
+		<div class="field">
+			<%=p.label :telephone %>
+			<%=p.text_field :telephone %>
+		</div>
+		<div class="field">
+			<%=p.label :phone %>
+			<%=p.text_field :phone %>
+		</div>
+		<div class="field">
+			<%=p.label :qq %>
+			<%=p.text_field :qq %>
+		</div>
+</div>
+<div class="fields">
+		<div class="field">
+			<%=p.label :email %>
+			<%=p.text_field :email %>
+		</div>
+		<div class="field">
+			<%= p.label :birthday %>
+			<%= p.date_select :birthday,
+			{start_year: 1980, end_year: 2008}, 
+			{class: 'ui dropdown'} %>
+		</div>
+		
 </div>
 	<%= p.submit class: 'ui button green'%>
 <% end %>
