@@ -5,6 +5,14 @@
 		<%=p.text_field :name %>
 	</div>
 	<div class="field">
+		<%=p.label :englishname %>
+		<%=p.text_field :englishname %>
+	</div>
+	<div class="field">
+		<%= p.label :sex %>
+		<%= p.select :sex, [['男', 1],['女', 0]], {}, {class: 'ui dropdown'} %>
+	</div>
+	<div class="field">
 		<%=p.label  :department_id %>
 		<%=p.select :department_id, 
 					Department.all.collect{ |p| [p.name, p.id] },
@@ -15,6 +23,22 @@
 		<%=p.select :position_id, 
 					Position.all.collect{ |p| [p.name, p.id] },
 					{include_blank: false},{class: 'ui dropdown'} %>
+	</div>
+	<div class="field">
+		<%=p.label :telephone %>
+		<%=p.text_field :telephone %>
+	</div>
+	<div class="field">
+		<%=p.label :phone %>
+		<%=p.text_field :phone %>
+	</div>
+	<div class="field">
+		<%=p.label :qq %>
+		<%=p.text_field :qq %>
+	</div>
+	<div class="field">
+		<%=p.label :email %>
+		<%=p.text_field :email %>
 	</div>
 </div>
 	<%= p.submit class: 'ui button green'%>
