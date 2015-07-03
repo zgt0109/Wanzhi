@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :departments
+  resources :departments do
+    post 'search', on: :collection
+  end
   resources :employees
   resources :positions
 

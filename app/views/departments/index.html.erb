@@ -1,12 +1,19 @@
 <div class="ui two column middle aligned grid">
     <div class="column">
-    <%= link_to '新增部门', new_department_path,remote: true, class: 'ui button green'%>
+    	<%= link_to '新增部门', new_department_path,remote: true, class: 'ui button green'%>
     </div>
+
     <div class="column">
-        <div class="ui icon input right fluid">
-            <input type="text" placeholder="搜索">
-            <i class="search icon"></i>
-        </div>
+        <%= form_tag '/departments/search' ,class: 'ui form' do |s| %>
+	    <div class="ui two column middle aligned grid">	    	
+	      <div class="column">
+	      	<%= text_field_tag :keywords, params[:keywords] %>
+	      </div>
+	      <div class="column">
+	      	<%= submit_tag "搜索", :name => nil, class: 'ui button green'%>
+	      </div>
+	    </div>
+    	<% end %>
     </div>
 </div>
 
@@ -40,11 +47,5 @@
 <div class="ui modal" id="newEmployee">
 	<i class="close icon"></i>
 	<div class="header">新增部门员工</div>
-	<div class="content"></div>
-</div>
-
-<div class="ui modal" id="editEmployee">
-	<i class="close icon"></i>
-	<div class="header">修改部门员工</div>
 	<div class="content"></div>
 </div>

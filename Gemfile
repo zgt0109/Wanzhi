@@ -37,6 +37,7 @@ gem 'enumerize', '~> 0.11.0'
 
 gem 'aasm', '~> 4.1.1'
 
+gem 'annotate', '~> 2.6.10'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -62,5 +63,4 @@ group :development, :test do
 
   gem 'thin', '~> 1.6.3'
 
-  gem 'annotate', '~> 2.6.10'
 end

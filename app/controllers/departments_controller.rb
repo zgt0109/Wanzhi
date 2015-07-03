@@ -11,6 +11,9 @@ class DepartmentsController < ApplicationController
   def edit
   end
 
+  def show
+  end
+
   def update
   	respond_to do |format|
   		if @department.update(department_params)
@@ -43,6 +46,12 @@ class DepartmentsController < ApplicationController
   		 	format.js
   		end
   	end
+  end
+
+# Department.where('name like ?', '%小白%')
+  def search
+    @departments = Department.where('name like ?', "%#{params[:keywords]}%")
+    render :index
   end
 
   private

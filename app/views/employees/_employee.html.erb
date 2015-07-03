@@ -14,7 +14,7 @@
 		<% end %>
 	</td>
 	<td><%= link_to employee_path(employee), method: :delete,
-	data:{confirm: 'Are you Sure?'}, class: 'ui button basic icon small red' do %>
+	data:{confirm: "确认删除员工:  #{employee.name}  吗?"}, class: 'ui button basic icon small red' do %>
 		<i class="trash icon"></i>删除
 		<% end %>
 	</td>
