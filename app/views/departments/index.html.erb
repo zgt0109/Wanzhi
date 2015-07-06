@@ -3,20 +3,15 @@
     	<%= link_to '新增部门', new_department_path,remote: true, class: 'ui button green'%>
     </div>
 
-    <div class="column">
-        <%= form_tag '/departments/search' ,class: 'ui form' do |s| %>
-	    <div class="ui two column middle aligned grid">	    	
-	      <div class="column">
+    <div class="right floated column five wide">
+        <%= form_tag '/departments/search' ,class: 'ui form' do %>
+	    <div class="ui input">
 	      	<%= text_field_tag :keywords, params[:keywords] %>
-	      </div>
-	      <div class="column">
-	      	<%= submit_tag "搜索", :name => nil, class: 'ui button green'%>
-	      </div>
+	      	<%= submit_tag " 搜索  ", class: 'ui button green' %>
 	    </div>
     	<% end %>
     </div>
 </div>
-
 <table class="ui celled table">
 	<thead>
 		<tr>

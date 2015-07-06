@@ -11,9 +11,6 @@ class DepartmentsController < ApplicationController
   def edit
   end
 
-  def show
-  end
-
   def update
   	respond_to do |format|
   		if @department.update(department_params)
