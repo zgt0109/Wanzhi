@@ -39,6 +39,9 @@ gem 'aasm', '~> 4.1.1'
 
 gem 'annotate', '~> 2.6.10'
 
+gem 'execjs'  
+gem 'therubyracer'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

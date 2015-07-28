@@ -1,0 +1,36 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1378301639.537406:@value{	I"length:EFi÷I"digest;
+F"%6551711a47c89f8dbb58694f47fdeb42I"source;
+FI"÷(function() {
+  (function($) {
+    $.fn.china_city = function() {
+      return this.each(function() {
+        var selects;
+        selects = $(this).find('.city-select');
+        return selects.change(function() {
+          var $this, next_selects;
+          $this = $(this);
+          next_selects = selects.slice(selects.index(this) + 1);
+          $("option:gt(0)", next_selects).remove();
+          if (next_selects.first()[0] && $this.val()) {
+            return $.get("/china_city/" + ($(this).val()), function(data) {
+              var option, _i, _len, _results;
+              _results = [];
+              for (_i = 0, _len = data.length; _i < _len; _i++) {
+                option = data[_i];
+                _results.push(next_selects.first()[0].options.add(new Option(option[0], option[1])));
+              }
+              return _results;
+            });
+          }
+        });
+      });
+    };
+    return $(function() {
+      return $('.city-group').china_city();
+    });
+  })(jQuery);
+
+}).call(this);
+;
+FI"_version;
+F"%9c0d0794fb04205b2ba69bf8394dbc3a

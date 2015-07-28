@@ -1,0 +1,12 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1378281421.319833:@value{	I"length:ETikI"digest;
+TI"%35a736846ceee22f2b6eede5139a3dd0;
+FI"source;
+TI"k//= require jquery
+//= require china_city/jquery.china_city
+//= require jquery23
+//= require_tree .
+;
+;
+TI"_version;
+TI"%917df3a10d6f403d1d85c8af00c95553;
+F
